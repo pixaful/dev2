@@ -1,0 +1,291 @@
+/*!
+Theme Name: pixaful
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: pixaful
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+pixaful is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/* Colours */
+
+$main:#604870;
+$main2:#5d2e8c;
+$sec1:#a66885;
+$sec2:#769889;
+$sec3:#97bf84;
+$grey:#333;
+$grey2:#111;
+
+/* Grid Gaps */
+$gapsm: 20px;
+$gapmd: 40px;
+$gaplg:80px;
+
+
+
+@import 'inc/fontface.scss';
+@import 'inc/menu.scss';
+@import 'inc/switch.scss';
+@import 'inc/elements.scss';
+@import 'inc/wordpress.scss';
+@import 'inc/grid';
+
+
+.theme-light {
+    --color-primary: #0060df;
+    --color-secondary: #fbfbfe;
+    --color-tertiary:#cecece;
+    --color-accent: #fd6f53;
+    --font-color: #333;
+    --color-footer:#dadada;
+    --header-purple:#cdcdce;
+    --logo-letters:#5d2e8c;
+    --logo-blocks:#769889;
+ }
+ .theme-dark {
+    --color-primary: #17ed90;
+    --color-secondary: #243133;
+    --color-tertiary:#1a2325;
+    --color-accent: #12cdea;
+    --font-color: #ffffff;
+    --color-grey1:#333;
+    --color-footer:#161616;
+    --header-purple:#75508b;
+    --logo-letters:#e4e4e4;
+    --logo-blocks:#769889;
+
+ }
+body {
+    background:var(--color-secondary);
+    color:#fff;
+    margin: 0;
+    padding:0;
+    font-family: 'Merriweather', serif;
+    color:var(--font-color);
+}
+img {
+    max-width:100%;
+    height:auto;
+}
+
+
+
+
+/* Sticky Footer */
+.site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  .main {
+    flex: 1;
+  }
+
+  .single {
+      .main {
+          z-index:9;
+      }
+  }
+
+
+h1,h2,h3 {
+    font-family: 'Cabin', sans-serif;
+}
+.main,.footer {
+    li {
+        margin-bottom:5px;
+        i {
+            margin-right:10px;
+        }
+    }
+}
+
+a.uk-button {
+    color:#fff;
+    text-decoration:none;
+    font-family: 'Cabin', sans-serif;
+}
+/* Grid System */
+.gridrow {
+    display:grid;
+}
+.container {
+    padding: 0 5px;
+}
+
+.uk-align-right\@m {
+    float:right;
+}
+
+.justify {
+    display:grid;
+    align-items:center;
+}
+
+.footer {
+    margin-top:20px;
+   background:var(--color-footer);
+   color:var(--font-color);
+
+   a{
+       color:var(--font-color);
+       text-decoration:none;
+   }
+   ul {
+       padding:0;
+   }
+   li {
+       list-style:none;
+   }
+}
+
+
+ 
+    svg#topwave {
+        fill:var(--header-purple);
+        position:absolute;
+        z-index:1;
+        display:none;
+      }
+   
+.letters {
+    fill:var(--logo-letters);
+}
+.square {
+    fill:var(--logo-blocks);
+}
+.main {
+
+}
+/* Portrait and Landscape */
+
+
+@media only screen and (min-width:1024px) {
+
+    .single {
+  
+        .nav__container, header {
+            width: 100%;
+            background: var(--header-purple);
+            z-index:99;
+        }
+    
+        .intro {
+            background: var(--header-purple);
+        }
+        
+        }
+
+    .sticky {
+        position: sticky;
+        position: -webkit-sticky;
+
+        top: 0px;
+  
+      }
+svg#topwave {
+    display:block;
+}
+
+body {
+    font-size:1em;
+
+}
+p,li {
+    line-height:1.4;
+}
+.intro {
+    h1 {
+        font-size:1.7em;
+        line-height:1.2;
+        margin-top:0;
+    }
+    p {
+        font-size:1.2em;
+    }
+}
+    .container {
+        padding:0 8%;
+    }
+ .nav__logo {
+     padding-left:0;
+     img {
+         max-width:auto;
+     }
+ }
+ .nav__menu li {
+     padding:0em;
+ }
+ .nav__menu li a{
+     padding-left:20px;
+     background:transparent;
+     color:var(--font-color);
+     &:hover {
+         color:var(--font-color);
+     }
+ }
+ .header {
+     padding:20px 0;
+ }
+ .switch {
+     top:30px;
+ }
+}
+@media only screen and (min-width:1280px) {
+    .intro {
+        h1 {
+            font-size:3em;
+            line-height:1.2;
+            margin-top:0;
+        }
+        p {
+            font-size:1.3em;
+        }
+    }
+}
+
+@media only screen and (min-width:1366px) {
+
+}
+
+@media only screen and (min-width:1440px) {
+    .intro {
+        h1 {
+            font-size:3.4em;
+            line-height:1.2;
+            margin-top:0;
+        }
+        p {
+            font-size:1.5em;
+        }
+    }
+}
+
+@media only screen and (min-width:1920px) {
+    .intro {
+        h1 {
+            font-size:4.6em;
+            line-height:1.2;
+        } p {
+        font-size:1.9em;
+    }
+    }
+   
+
+}

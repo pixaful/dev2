@@ -1,0 +1,52 @@
+/* My Little Grid System */
+
+.mobile {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+}
+
+@media only screen and (min-width:1024px){
+
+    
+
+    .gridcol {
+        margin-bottom:0px;
+    }
+    
+
+.gridrow {
+    display:grid;
+    grid-gap:$gapmd;
+    
+}
+
+.gridrowlg {
+    display:grid;
+    grid-gap:$gaplg;
+}
+
+.row2 {
+    grid-template-columns:1fr 1fr;
+}
+.row3 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.row4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.row5 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.row39 {
+    grid-template-columns: 3fr 9fr;
+}
+.row48 {
+    grid-template-columns: 4fr 8fr;
+}
+
+.row84 {
+    grid-template-columns: 12fr 4fr;
+}
+.row210 {
+    grid-template-columns: 2fr 10fr;
+}}
